@@ -1,0 +1,52 @@
+body {
+   background-color: rgb(38, 38, 38);
+}
+.container {
+   max-width: 750px;
+   margin: 0 auto;
+}
+.img-container {
+   max-width: 750px;
+   display: flex;
+   overflow: hidden;
+   margin-bottom: 20px;
+}
+.meme-img {
+   width: fit-content;
+   height: fit-content;
+}
+.two, .three, .four {
+   /* display: none; */
+}
+.des-ctrl{
+   display: flex;
+   justify-content: space-between;
+}
+.controls {
+   display: flex;
+   gap: 10px;
+   justify-content: end;
+   align-items: center;
+}
+.control {
+   width: 16px;
+   height: 16px;
+   background-color: aqua;
+   border-radius: 50%;
+}
+.description {
+   font-size: 1.5vw;
+   color: #fff;
+}
+.selected{
+   background-color: rgb(38, 38, 38);
+   box-sizing: border-box;
+   border: 3px solid aqua;
+}
+.control:hover{
+   background: #ffffff;
+}
+.selected:hover{
+   border-color: rgb(255, 255, 255);
+   background: rgb(38, 38, 38);
+}
