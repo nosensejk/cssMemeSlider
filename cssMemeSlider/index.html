@@ -8,50 +8,43 @@
 </head>
 <body>
    <div class="container">
-      <div class="img-container">
-         <div class="img-cont"><img src="../cssMemeSlider/img/frogband.png" alt="frogband" class="meme-img one"></div>
-         <div class="img-cont"><img src="../cssMemeSlider/img/drumfrog.png" alt="drumfrog" class="meme-img two"></div>
-         <div class="img-cont"><img src="../cssMemeSlider/img/singerfrog.png" alt="singerfrog" class="meme-img three"></div>
-         <div class="img-cont"><img src="../cssMemeSlider/img/guitarfrog.png" alt="guitarfrog" class="meme-img four"></div>
-         
-         
-         
-         
-
+      <div class="imgs">
+         <input type="radio" name="control" id="ctrl1">
+         <input type="radio" name="control" id="ctrl2">
+         <input type="radio" name="control" id="ctrl3">
+         <input type="radio" name="control" id="ctrl4">
+   
+         <div class="img-cont"><img src="../cssMemeSlider/img/frogband.png" alt=""></div>
+         <div class="img-cont"><img src="../cssMemeSlider/img/drumfrog.png" alt=""></div>
+         <div class="img-cont"><img src="../cssMemeSlider/img/guitarfrog.png" alt=""></div>
+         <div class="img-cont"><img src="../cssMemeSlider/img/singerfrog.png" alt=""></div>
       </div>
-      <div class="des-ctrl">
+      <div class="desc-pag">
          <div class="description">
-            <span class="desc one">
-               My favorite music band
-            </span>
-            <span class="desc two">
-               John Travolta
-            </span>
-            <span class="desc three">
-               Bill Gates
-            </span>
-            <span class="desc four">
-               Leonardo Da Vinci
-            </span>
+            <p class="text">My favorite music band</p>
+            <p class="text">John Travolta</p>
+            <p class="text">Bill Gates</p>
+            <p class="text">Leonardo Da Vinci</p>
          </div>
-         
          <div class="controls">
-            <div class="control selected">
-               <div class="control_circle selected"></div>
-            </div>
-            <div class="control">
-               <div class="control_circle"></div>
-            </div>
-            <div class="control">
-               <div class="control_circle"></div>
-            </div>
-            <div class="control">
-               <div class="control_circle"></div>
-            </div>
+            <label for="ctrl1" class="ctrl">
+               <div class="circle"></div>
+            </label>
+            <label for="ctrl2" class="ctrl">
+               <div class="circle"></div>
+            </label>
+            <label for="ctrl3" class="ctrl">
+               <div class="circle"></div>
+            </label>
+            <label for="ctrl4" class="ctrl">
+               <div class="circle"></div>
+            </label>
          </div>
       </div>
    </div>
+   
+   
 <p style="color:aliceblue">Мне нужно ещё немного доделать. Проверьте в конце cross-check'a, пожалуйста)</p>
 </body>
-<script src="script.js"></script>
+
 </html>

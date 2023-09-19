@@ -1,92 +1,115 @@
-body {
-   background-color: rgb(38, 38, 38);
+*{
+   padding: 0;
+   margin: 0;
 }
-.container {
-   max-width: 50%;
-   margin: 0 auto;
+body{
+   background: #6b6b6b;
 }
-.img-container {
-   max-width: 100%;
-   height: 50vh;
-   display: flex;
-   overflow: hidden;
-   margin-bottom: 20px;
-   border-radius: 1em;
-}
-/* .cont{
-   width: 60vw;
-   height: 60vh;
-} */
-.meme-img {
-   height: 100%;
+.container{
    width: 50vw;
+   margin: 0 auto;
+   /* border: 1px solid #000; */
+   overflow: hidden;
+}
+.imgs{
+   width: 400%;
+   height: 50vh;
    
+   /* border: 2px solid #ff0303; */
+   border-radius: 1em;
+   margin-top: 4em;
+   display: flex;
+   margin-bottom: 2em;
+}
+.img-cont{
+   width: 25%;
    position: relative;
-   transition: .5s all ease;
-   
+   transition: all .5s ease;
+
 }
-.two, .three, .four {
-   /* display: none; */
+.img-cont img{
+   width: 100%;
+   height: 100%;
+   position: relative;
 }
-.des-ctrl{
+.desc-pag{
    display: flex;
    justify-content: space-between;
+   /* border: 1px solid #000; */
+   
 }
 .description{
-   /* border: 1px solid #fff; */
-   overflow: hidden;
-   white-space: nowrap;
-   position: relative;
-   transition: .5s all ease;
-}
-.desc{
-   /* border: 1px solid #ff0000; */
-   display: inline-block;
-   width: 100%;
-   margin: 0;
-   padding: 0;
-   position: relative;
-   transition: .5s all ease;
-}
-.controls {
+   /* width: 20%; */
    display: flex;
-   
-   justify-content: end;
-   align-items: center;
+   justify-content: space-around;
+   border: 1px solid #000;
+   text-wrap:nowrap;
+   position: relative;
 }
-.control{
-   width: 24px;
-   height: 24px;
+.description p {
+   /* margin-right: 4em; */
+}
+.controls{
+   
+   display: flex;
+   justify-content: space-between;
+   cursor: pointer;
+
+   
+}
+.circle{
+   width: 69%;
+   height: 69%;
+   background-color: aqua;
+   border-radius: 50%;
+}
+.ctrl{
+   width: 2em;
+   height: 2em;
    display: flex;
    justify-content: center;
    align-items: center;
    cursor: pointer;
-}
-.control_circle {
-   width: 69%;
-   height: 69%;
-   background-color: rgb(0, 208, 255);
-   border-radius: 50%;
-   
    
 }
-.description {
-   font-size: 1.5rem;
-   color: #fff;
-}
-
-.control:hover .control_circle:not(.selected){
+.ctrl:hover .circle{
    background: #fff;
 }
-.control_circle.selected{
-   border: 3px solid rgb(0, 225, 255);
-   background: rgb(38, 38, 38);
-   box-sizing: border-box;
+.text{
+   position: relative;
 }
-.control:hover .control_circle.selected{
-   border-color: #fff;
+.circle{
+   cursor: pointer;
 }
-.control:active .control_circle:not(.selected){
-   background: rgb(114, 114, 114);
+input[name="control"]{
+   display: none;
+}
+
+#ctrl1:checked ~ .img-cont{
+   left: 0;
+}
+#ctrl1:checked ~ .text{
+   left: 0;
+}
+
+#ctrl2:checked ~ .img-cont{
+   left: -25%;
+}
+#ctrl2:checked ~ .text{
+   left: 20px;
+}
+
+#ctrl3:checked ~ .img-cont{
+   left: -50%;
+}
+#ctrl3:checked ~ .text{
+   left: 40px;
+}
+
+#ctrl4:checked ~ .img-cont{
+   left: -75%;
+}
+#ctrl4:checked ~ .text{
+   left: 60px;
 }
 
