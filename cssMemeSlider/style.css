@@ -3,13 +3,20 @@
    margin: 0;
 }
 body{
-   background: #6b6b6b;
+   background-color: rgb(61, 61, 61);
 }
 .container{
-   width: 50vw;
+   width: 90vw;
+   /* min-width: 30rem; */
    margin: 0 auto;
    /* border: 1px solid #000; */
    overflow: hidden;
+}
+.slider{
+   width: 93%;
+   max-width: 40em;
+   overflow: hidden;
+   margin: 0 auto;
 }
 .imgs{
    width: 400%;
@@ -23,28 +30,30 @@ body{
 }
 .img-cont{
    width: 25%;
-   position: relative;
+   
    transition: all .5s ease;
 
 }
 .img-cont img{
    width: 100%;
    height: 100%;
-   position: relative;
+   
 }
 .desc-pag{
    display: flex;
    justify-content: space-between;
+   align-items: center;
    /* border: 1px solid #000; */
    
 }
 .description{
-   /* width: 20%; */
-   display: flex;
-   justify-content: space-around;
-   border: 1px solid #000;
+   /* width: 30%; */
+   height: 1.5em;
+   overflow: hidden;
+   /* border: 1px solid #000; */
    text-wrap:nowrap;
-   position: relative;
+   
+   /* position: relative; */
 }
 .description p {
    /* margin-right: 4em; */
@@ -58,9 +67,9 @@ body{
    
 }
 .circle{
-   width: 69%;
-   height: 69%;
-   background-color: aqua;
+   width: 60%;
+   height: 60%;
+   background-color: rgb(28, 255, 255);
    border-radius: 50%;
 }
 .ctrl{
@@ -76,7 +85,14 @@ body{
    background: #fff;
 }
 .text{
-   position: relative;
+   font-size: 1.5em;
+   transition: all .5s ease;
+   font-weight: 700;
+   color: antiquewhite;
+   /* margin-top: 1em; */
+}
+.t1{
+   margin-top: -0.1em;
 }
 .circle{
    cursor: pointer;
@@ -85,31 +101,74 @@ input[name="control"]{
    display: none;
 }
 
-#ctrl1:checked ~ .img-cont{
-   left: 0;
+#ctrl1:checked ~ .imgs .s1{
+   margin-left: 0;
 }
-#ctrl1:checked ~ .text{
-   left: 0;
-}
-
-#ctrl2:checked ~ .img-cont{
-   left: -25%;
-}
-#ctrl2:checked ~ .text{
-   left: 20px;
+#ctrl1:checked ~ .desc-pag .t1{
+   margin-top: 0;
 }
 
-#ctrl3:checked ~ .img-cont{
-   left: -50%;
+#ctrl2:checked ~ .imgs .s1 {
+   margin-left: -25%;
 }
-#ctrl3:checked ~ .text{
-   left: 40px;
-}
-
-#ctrl4:checked ~ .img-cont{
-   left: -75%;
-}
-#ctrl4:checked ~ .text{
-   left: 60px;
+#ctrl2:checked ~ .desc-pag .t1{
+   margin-top: -1.1em;
 }
 
+#ctrl3:checked ~ .imgs .s1{
+   margin-left: -50%;
+}
+#ctrl3:checked ~ .desc-pag .t1{
+   margin-top: -2.2em;
+}
+
+#ctrl4:checked ~ .imgs .s1{
+   margin-left: -75%;
+}
+#ctrl4:checked ~ .desc-pag .t1{
+   margin-top: -3.3em;
+}
+
+#ctrl1:checked ~ .desc-pag .circle1,
+#ctrl2:checked ~ .desc-pag .circle2,
+#ctrl3:checked ~ .desc-pag .circle3,
+#ctrl4:checked ~ .desc-pag .circle4{
+   border: 3px solid rgb(28, 255, 255);
+   background-color: rgb(61, 61, 61);
+   box-sizing: border-box;
+}
+#ctrl1:checked ~ .desc-pag .ctrl:hover .circle, 
+#ctrl2:checked ~ .desc-pag .ctrl:hover .circle,
+#ctrl3:checked ~ .desc-pag .ctrl:hover .circle,
+#ctrl4:checked ~ .desc-pag .ctrl:hover .circle{
+   border-color: #fff;
+}
+
+#ctrl1:active:not(:checked) ~ .desc-pag .circle1,
+#ctrl2:active:not(:checked) ~ .desc-pag .circle2,
+#ctrl3:active:not(:checked) ~ .desc-pag .circle3,
+#ctrl4:active:not(:checked) ~ .desc-pag .circle4{
+   background: rgb(114, 114, 114);
+}
+
+
+@media (max-width:768px){
+   .container{
+      /* width: 90vw; */
+   }
+   .desc-pag{
+      flex-direction: column-reverse;
+   }
+   .controls{
+      justify-content: center;
+      margin-bottom: 1em;
+   }
+   .imgs{
+      margin-bottom: 1em;
+   }
+   
+   .description{
+      width: 100%;
+      
+   }
+}
