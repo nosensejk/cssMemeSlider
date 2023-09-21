@@ -133,7 +133,7 @@ input[name="control"]{
 #ctrl2:checked ~ .desc-pag .circle2,
 #ctrl3:checked ~ .desc-pag .circle3,
 #ctrl4:checked ~ .desc-pag .circle4{
-   border: 3px solid rgb(28, 255, 255);
+   border: .15em solid rgb(28, 255, 255);
    background-color: rgb(61, 61, 61);
    box-sizing: border-box;
 }
